@@ -1,0 +1,197 @@
+<!-- index.html - Главная страница -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе "Ван Пис" - Главная</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FFF9F0;
+            color: #2C2418;
+            line-height: 1.5;
+        }
+        :root {
+            --warm-gold: #C9A87C;
+            --deep-bronze: #B87333;
+            --soft-silver: #E8E2D9;
+            --light-cream: #FFF8EB;
+        }
+        .navbar {
+            background: rgba(255, 248, 235, 0.95);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(201, 168, 124, 0.3);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #B87333, #C9A87C);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #4a3724;
+            transition: 0.2s;
+            padding: 0.4rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            border-bottom-color: #C9A87C;
+            color: #B87333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        .hero-content {
+            flex: 1;
+        }
+        .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #8B5A2B;
+            margin-bottom: 1rem;
+        }
+        .welcome-text {
+            font-size: 1.2rem;
+            color: #5c432c;
+            margin-bottom: 2rem;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .btn {
+            text-decoration: none;
+            display: inline-block;
+            background: white;
+            border: 1.5px solid #C9A87C;
+            padding: 0.8rem 1.8rem;
+            font-weight: 600;
+            border-radius: 40px;
+            transition: 0.25s;
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: #8B5A2B;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: #C9A87C;
+            border: none;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #B87333;
+            transform: translateY(-2px);
+        }
+        .btn-outline:hover {
+            background: #F9EFE3;
+            border-color: #B87333;
+        }
+        .hero-img {
+            flex: 1;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .hero-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        footer {
+            background: #F7EFE4;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #b48c62;
+            border-top: 1px solid #E9DBCA;
+        }
+        @media (max-width: 780px) {
+            .nav-container { flex-direction: column; gap: 1rem; }
+            .hero { flex-direction: column; }
+            .hero-content h1 { font-size: 2.4rem; }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">🍣 ONE PIECE <span>カフェ</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="about.html">О кафе</a></li>
+        </ul>
+    </div>
+</nav>
+<main>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Кафе «Ван Пис»</h1>
+                <div class="welcome-text">Добро пожаловать на борт нашего Гранд Лайн! ✨ Вдохновляющее путешествие в мир изысканных вкусов и восточного колорита. Тёплая атмосфера, вдохновлённая приключениями, ждёт вас.</div>
+                <div class="btn-group">
+                    <a href="menu.html" class="btn btn-primary">🍜 Посмотреть меню</a>
+                    <a href="gallery.html" class="btn btn-outline">📸 Галерея</a>
+                    <a href="contacts.html" class="btn btn-outline">📍 Контакты</a>
+                    <a href="about.html" class="btn btn-outline">⚓ О кафе</a>
+                </div>
+            </div>
+            <div class="hero-img">
+
+<img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://avatars.mds.yandex.net/get-shedevrum/11473245/img_d360aef2f4ee11ee984226a3eff35d6b/orig" width="919" height="919">
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>🍛 Кафе «Ван Пис» | Гранд Лайн вкуса | Все права защищены</p>
+</footer>
+</body>
+</html>

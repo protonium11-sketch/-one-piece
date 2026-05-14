@@ -1,0 +1,242 @@
+<!-- menu.html - Страница меню с суши и тортом "Сундук с сокровищами" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе "Ван Пис" - Меню</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #FFF9F0; color: #2C2418; }
+        :root { --warm-gold: #C9A87C; --deep-bronze: #B87333; }
+        .navbar {
+            background: rgba(255, 248, 235, 0.95);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(201, 168, 124, 0.3);
+        }
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #B87333, #C9A87C);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #4a3724;
+            transition: 0.2s;
+            padding: 0.4rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            border-bottom-color: #C9A87C;
+            color: #B87333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+        .page-header h2 {
+            font-size: 2rem;
+            color: #926e42;
+            margin-bottom: 0.5rem;
+        }
+        .menu-category {
+            font-size: 1.8rem;
+            font-weight: 600;
+            border-left: 6px solid #C9A87C;
+            padding-left: 1rem;
+            margin: 2rem 0 1.2rem 0;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 1.8rem;
+        }
+        .menu-card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: 0.2s;
+            border: 1px solid #f0e4d4;
+        }
+        .menu-card:hover {
+            transform: translateY(-4px);
+            border-color: #E1C9AE;
+            box-shadow: 0 12px 24px rgba(185, 115, 51, 0.08);
+        }
+        .menu-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        .price {
+            color: #B87333;
+            font-weight: 700;
+        }
+        .desc {
+            color: #6b5a48;
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #C9A87C20;
+            color: #B87333;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            margin-top: 0.5rem;
+        }
+        footer {
+            background: #F7EFE4;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #b48c62;
+            border-top: 1px solid #E9DBCA;
+        }
+        @media (max-width: 780px) {
+            .nav-container { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">🍣 ONE PIECE <span>カフェ</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="menu.html" class="active">Меню</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="about.html">О кафе</a></li>
+        </ul>
+    </div>
+</nav>
+<main>
+    <div class="container">
+        <div class="page-header">
+            <h2>⚓ Наше меню</h2>
+            <p>Путешествие вкуса от завтрака до сокровищ</p>
+        </div>
+
+        <div class="menu-category">🍳 Завтраки</div>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-title"><span>Завтрак капитана</span><span class="price">390₽</span></div><div class="desc">Глазунья с беконом, тост с авокадо, свежие овощи</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Тёплый сэндвич «Тысячесолнечный»</span><span class="price">340₽</span></div><div class="desc">Курица, сыр чеддер, соус чипотле и руккола</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Овсянка Гоуна</span><span class="price">280₽</span></div><div class="desc">С ягодами, мёдом и карамелизированными бананами</div></div>
+        </div>
+
+        <div class="menu-category">🔥 Горячее</div>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-title"><span>Филе лосося на гриле</span><span class="price">790₽</span></div><div class="desc">Соус понзу, овощи на пару, рис басмати</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Стейк «Дьявольский фрукт»</span><span class="price">890₽</span></div><div class="desc">Говядина с пикантным перцем и трюфельным маслом</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Куриные крылья «Ван Пис»</span><span class="price">520₽</span></div><div class="desc">Острые, с медово-имбирным соусом</div></div>
+        </div>
+
+        <div class="menu-category">🥨 Закуски</div>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-title"><span>Эби темпура</span><span class="price">470₽</span></div><div class="desc">Креветки в тонком кляре, соус тенцуру</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Гёдза с овощами</span><span class="price">350₽</span></div><div class="desc">4 шт., румяные, подаются с уксусным соусом</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Спринг-роллы</span><span class="price">310₽</span></div><div class="desc">С рисом, грибами и кимчи</div></div>
+        </div>
+
+        <div class="menu-category">🥗 Салаты</div>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-title"><span>Салат «Чоппер»</span><span class="price">430₽</span></div><div class="desc">Микс салатов, тунец, перепелиные яйца, соус цезарь</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Тангель с авокадо</span><span class="price">390₽</span></div><div class="desc">Лосось, авокадо, огурец, кунжут и пряная заправка</div></div>
+        </div>
+
+        <div class="menu-category">🍲 Супы</div>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-title"><span>Мисо-суп</span><span class="price">290₽</span></div><div class="desc">Тофу, вакаме, зелёный лук</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Лапша рамён «Тони»</span><span class="price">520₽</span></div><div class="desc">Свинина, яйцо пашот, нори, кукуруза</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Том ям с креветками</span><span class="price">560₽</span></div><div class="desc">Острый тайский суп с кокосовым молоком</div></div>
+        </div>
+
+        <!-- 🍣 НОВЫЙ РАЗДЕЛ: СУШИ И РОЛЛЫ -->
+        <div class="menu-category">🍣 Суши и роллы</div>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-title"><span>Филадельфия</span><span class="price">520₽</span></div>
+                <div class="desc">Лосось, сливочный сыр, огурец, рис, нори</div>
+                <div class="badge">🔥 Хит продаж</div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-title"><span>Калифорния</span><span class="price">490₽</span></div>
+                <div class="desc">Краб, авокадо, огурец, икра тобико, майонез</div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-title"><span>Запечённый лосось</span><span class="price">580₽</span></div>
+                <div class="desc">Запечённый лосось, сливочный сыр, соус унаги</div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-title"><span>Сет «Гранд Лайн»</span><span class="price">1890₽</span></div>
+                <div class="desc">24 кусочка: Филадельфия, Калифорния, Чукка, лосось, тунец</div>
+                <div class="badge">⭐ На 2-3 персон</div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-title"><span>Суши «Ван Пис»</span><span class="price">390₽</span></div>
+                <div class="desc">Лосось, авокадо, сыр, фирменный соус «Мугивара»</div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-title"><span>Темпура ролл</span><span class="price">540₽</span></div>
+                <div class="desc">Креветка темпура, огурец, авокадо, соус спайси</div>
+            </div>
+        </div>
+
+        <div class="menu-category">🍹 Напитки</div>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-title"><span>Апельсиновый сок «Санни»</span><span class="price">220₽</span></div><div class="desc">Свежевыжатый</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Матча латте</span><span class="price">290₽</span></div><div class="desc">Японский зелёный чай с молоком</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Лимонад «Коловая волна»</span><span class="price">260₽</span></div><div class="desc">Имбирь, мята, лайм</div></div>
+        </div>
+
+        <!-- 🎁 ДЕСЕРТЫ с тортом "СУНДУК С СОКРОВИЩАМИ" -->
+        <div class="menu-category">🍰 Десерты</div>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-title"><span>Чизкейк «Весёлый»</span><span class="price">380₽</span></div><div class="desc">Нежный творожный десерт, ягодный кули</div></div>
+            <div class="menu-card"><div class="menu-title"><span>Моти с клубникой</span><span class="price">290₽</span></div><div class="desc">2 шт, рисовое тесто, сладкая начинка</div></div>
+            <div class="menu-card">
+                <div class="menu-title"><span>🏴‍☠️ Торт «Сундук с сокровищами»</span><span class="price">690₽</span></div>
+                <div class="desc">Шоколадный бисквит с кремом-пралине, внутри — сюрприз из карамелизированных орехов и золотого драже. Подаётся с «пиратским» соусом из белого шоколада и ягодным кладом.</div>
+                <div class="badge">✨ Фирменный десерт! ✨</div>
+            </div>
+            <div class="menu-card"><div class="menu-title"><span>Тирамису «Пиратский клад»</span><span class="price">420₽</span></div><div class="desc">Пропитанный кофе и маскарпоне с какао-пылью «золото»</div></div>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>🍛 Кафе «Ван Пис» | Гранд Лайн вкуса | Все права защищены</p>
+</footer>
+</body>
+</html>
